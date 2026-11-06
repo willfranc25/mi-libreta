@@ -1,0 +1,61 @@
+{
+  "name": "mi-libreta",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Mi Libreta: libreta digital de calificaciones, instalable y offline-first.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "preview": "vite preview --port 4173",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:db": "vitest run supabase/tests",
+    "test:e2e": "playwright test",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "icons": "node scripts/generate-icons.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.0",
+    "decimal.js": "^10.6.0",
+    "dexie": "^4.4.7",
+    "dexie-react-hooks": "^4.4.0",
+    "exceljs": "^4.4.0",
+    "fflate": "^0.8.3",
+    "lucide-react": "^1.70.0",
+    "papaparse": "^5.7.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router": "^8.5.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.15",
+    "@playwright/test": "^1.65.0",
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/node": "^24.0.0",
+    "@types/papaparse": "^5.3.16",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "@xmldom/xmldom": "^0.9.12",
+    "fake-indexeddb": "^6.2.7",
+    "jsdom": "^31.0.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.0",
+    "workbox-window": "^7.4.1"
+  },
+  "overrides": {
+    "uuid": "^14.0.3",
+    "deepmerge": "^4.3.1",
+    "minimatch": "^11.0.5",
+    "glob": "^14.0.4"
+  }
+}

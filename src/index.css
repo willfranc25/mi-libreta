@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* Escala de tamaño de texto accesible para docentes (Normal / Grande / Muy grande) */
+html.font-scale-normal {
+  font-size: 16px;
+}
+
+html.font-scale-large {
+  font-size: 18px;
+}
+
+html.font-scale-xlarge {
+  font-size: 20px;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Estilos de impresión limpios para exportar cuadros y reportes en PDF */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}
